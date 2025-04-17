@@ -27,7 +27,7 @@ export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 4000); // 2 second delay
+    const timer = setTimeout(() => setIsLoading(false), 3000); // 2 second delay
     return () => clearTimeout(timer);
   }, []);
 
@@ -38,7 +38,7 @@ export default function Home() {
 
 
   return (
-    <div className={`${geistSans.className} ${geistMono.className} pt-[15vh] grid bg-amber-100 text-black border-2 grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
+    <div className={`${geistSans.className} ${geistMono.className} pt-[15vh] grid bg-amber-100 text-black border-2 overflow-x-hidden grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
       <header className="w-screen p-2 mx-auto fixed top-0 h-[15%] flex justify-between ">
       <BasicCard/>
 
@@ -74,8 +74,9 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         {/* create a carousel  */}
 
-       <div className="p-6">
+       <div className="">
         <Slider/>
+       
        </div>
        
       </main>

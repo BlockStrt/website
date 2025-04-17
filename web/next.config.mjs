@@ -1,7 +1,9 @@
-import { withNextVideo } from "next-video/process";
+import withImages from 'next-images'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 };
 
-export default withNextVideo(nextConfig);
+
+export default withImages(nextConfig);
