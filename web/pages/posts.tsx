@@ -11,7 +11,7 @@ export default function Posts() {
     return (
       <div className="h-screen w-full bg-amber-800">
         {posts.map((post) => (
-          <p>--- </p>
+          <p key={post.id}> --- </p>
         ))}
       </div>
     );
