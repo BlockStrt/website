@@ -1,5 +1,6 @@
 import React ,{useEffect, useState} from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 import { useKeenSlider } from "keen-slider/react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import KeenSlider from 'keen-slider';
@@ -27,6 +28,7 @@ export default function SliderPost() {
     <div ref={sliderRef} className="keen-slider w-full flex md:h-[50vh] sm:h-[40vh] text-6xl text-center">
     <div className="keen-slider__slide number-slide1 flex">
        {/* <Video src={hopeVideo} autoplay/> */}
+       <Link href="https://www.hammerandhope.org">
        <Image 
        src="/hammer.jpg" 
        alt="example"
@@ -35,12 +37,15 @@ export default function SliderPost() {
        priority
        className='object-cover'
         />
+         </Link>
         <div className='p-3 pb-3'>
       <TypeWriter text="Welcome to Easy Counterparts to Add Syfii" duration={5} />
        
         </div>
+       
     </div>
     <div className="keen-slider__slide number-slide2 flex">
+      <Link href="https://store.jugrnaut.com/">
     <Image 
        src="/jug.jpeg" 
        alt="example"
@@ -49,6 +54,7 @@ export default function SliderPost() {
        priority
        className='object-cover'
         />
+        </Link>
         <div className='p-2'>
         <TypeWriter text="Welcome to Easy Counterparts to Add Syfii" duration={5} />
         </div>

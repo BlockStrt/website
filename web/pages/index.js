@@ -1,17 +1,13 @@
-
-
 import Image from "next/image";
 import { Geist, Geist_Mono} from "next/font/google";
 import { useEffect, useState } from "react";
 import { Box, ThemeWrapper } from 'retro-ui'
 import { Button, Modal, Badge } from "arcadeui";
-import Loading from "./loading";
 import Github from "../Components/gitHub";
 import Twitter from "../Components/twitter"
 import Linkedin from "../Components/Linked";
 import Slider from "../Components/Slider";
-
-
+import Loading from "./loading";
 
 
 const geistSans = Geist({
@@ -44,8 +40,8 @@ export default function Home() {
 
 
   return (
-    <div className={`pt-[15vh] grid bg-amber-100 text-black border-2 overflow-x-hidden grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
-      <header className="w-screen p-2 mx-auto fixed top-0 h-[15%] flex justify-between ">
+        <div className={`pt-[15vh] grid bg-amber-100 text-black border-2 overflow-x-hidden grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
+    <header className="w-screen p-2 mx-auto fixed top-0 h-[15%] flex justify-between ">
       <div className="p-4 w-full ">
       <ThemeWrapper >
           <Box type='error' className='w-[15%] text-center '>{'503:Joshua levy'}</Box>
@@ -75,7 +71,6 @@ export default function Home() {
           </a>
 
       </div>
-
       </header>
 
       {/* Main body */}
