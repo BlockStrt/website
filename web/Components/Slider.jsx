@@ -56,7 +56,22 @@ export default function SliderPost() {
         />
         </Link>
         <div className='p-2'>
-        <TypeWriter text="Welcome to Easy Counterparts to Add Syfii" duration={5} />
+        <TypeWriter text="jugrnaut" duration={5} />
+        </div>
+        </div>
+    <div className="keen-slider__slide number-slide2 flex">
+      <Link href="https://bucolic-longma-4d65a0.netlify.app/">
+    <Image 
+       src="/movie.jpeg" 
+       alt="example"
+       width={800} 
+       height={400} 
+       priority
+       className='object-cover'
+        />
+        </Link>
+        <div className='p-2'>
+        <TypeWriter text="Movie API Search" duration={5} />
         </div>
         </div>
     
