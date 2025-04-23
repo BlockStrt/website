@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Geist, Geist_Mono} from "next/font/google";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Box, ThemeWrapper } from 'retro-ui'
 import { Button, Modal, Badge } from "arcadeui";
 import Github from "../Components/gitHub";
@@ -28,11 +29,13 @@ export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef(null);
   
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 3000); // 2 second delay
     return () => clearTimeout(timer);
+    
   }, []);
 
   if (isLoading) {
@@ -40,7 +43,8 @@ export default function Home() {
   }
 
 
-  
+
+
 
 
   return (
@@ -93,9 +97,9 @@ export default function Home() {
          {/* Footer */}
       <footer className="w-full row-start-3 gap-[24px] flex-wrap items-center justify-between ">
       
-
+      <div className="w-[1250px] flex justify-between  ">
       <Button 
-      onClick={() => setIsOpen(true)}
+      onClick={() => setIsOpen(prev => !prev)}
       className='border-none special-gothic'
       >
         More Info
@@ -103,7 +107,8 @@ export default function Home() {
   
       <Modal
         isOpen={isOpen}
-        className='!flex !items-center special-gothic  !fixed !inset-0 !z-50 border-pixel-blue'
+   
+        className='!flex bg-amber-200 !items-center special-gothic  !fixed !inset-0 !z-50 border-pixel-blue'
         title="Technology Stack"
         showCloseButton={false} 
       >
@@ -136,7 +141,13 @@ export default function Home() {
           </div>
           </motion.div>
       </Modal>
-
+      <Link href="">
+      <Button className='border-none special-gothic'
+      >
+        Resume
+      </Button>
+      </Link>
+      </div>
       </footer>
     </div>
   );
