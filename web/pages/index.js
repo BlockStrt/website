@@ -5,6 +5,7 @@ import { Box, ThemeWrapper } from 'retro-ui'
 import { Button, Modal, Badge } from "arcadeui";
 import Github from "../Components/gitHub";
 import Twitter from "../Components/twitter"
+import {motion} from "motion/react";
 import Linkedin from "../Components/Linked";
 import Slider from "../Components/Slider";
 import Loading from "./loading";
@@ -27,6 +28,7 @@ export default function Home() {
 
   const [isLoading, setIsLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  
 
   useEffect(() => {
     const timer = setTimeout(() => setIsLoading(false), 3000); // 2 second delay
@@ -37,6 +39,8 @@ export default function Home() {
     return <Loading />;
   }
 
+
+  
 
 
   return (
@@ -89,8 +93,7 @@ export default function Home() {
          {/* Footer */}
       <footer className="w-full row-start-3 gap-[24px] flex-wrap items-center justify-between ">
       
-      <div>
-      
+
       <Button 
       onClick={() => setIsOpen(true)}
       className='border-none special-gothic'
@@ -100,32 +103,40 @@ export default function Home() {
   
       <Modal
         isOpen={isOpen}
-        className='!flex !items-center !justify-center !fixed !inset-0 !z-50 border-pixel-blue'
-        size='lg'
-        
+        className='!flex !items-center special-gothic  !fixed !inset-0 !z-50 border-pixel-blue'
+        title="Technology Stack"
+        showCloseButton={false} 
       >
+        <motion.div
+         initial={{ opacity: 0, x: -50 }}
+         animate={{ opacity: 1, x: 0 }}
+         exit={{ opacity: 0, x: -50 }}
+         transition={{ duration: 0.5 }}
+        >
     {/* Exit Button */}
     <button
       onClick={() => setIsOpen(false)}
-      className="  text-white hover:text-black text-xl font-bold"
+      className="  text-white special-gothic hover:text-black text-[40px] font-bold"
       aria-label="Close"
     >
       ×
     </button>
 
-        <div className="bg-green-300 p-8 rounded-lg shadow-lg text-black special-gothic text-[20px] ">
+        <div className="bg-amber-50 p-8 rounded-lg shadow-lg text-black special-gothic text-[20px] ">
           <h1>Technology stack</h1>
-          <li>Javascript</li>
+          <li>Typescript</li>
           <li>React</li>
-          <li>Modern Css & preprocessors</li>
-          <li>Command Line</li>
+          <li>Javascript</li>         
           <li>Nodejs</li>
+          <li>Modern Css & preprocessors</li>
           <li>mySQL</li>
+          <li>Command Line</li>
           <li>Git</li>
           <li>Github</li>
           </div>
+          </motion.div>
       </Modal>
-      </div>
+
       </footer>
     </div>
   );
