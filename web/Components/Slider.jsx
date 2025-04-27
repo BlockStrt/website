@@ -8,18 +8,44 @@ import TypeWriter from './Typewriter';
 
 
 
+function AutoplayPlugin(slider) {
+  let timeout;
+
+  function next() {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      if (!slider.track?.details) return; // This makes sure slider.next() is only called when the slider is fully built
+      slider.next();
+    }, 3000); // 2 seconds
+  }
+
+  slider.on("created", () => {
+    next();
+  });
+  slider.on("dragStarted", () => {
+    clearTimeout(timeout);
+  });
+  slider.on("animationEnded", () => {
+    next();
+  });
+  slider.on("updated", () => {
+    next();
+  });
+}
+
 
 
 export default function SliderPost() {
 
     const [sliderRef] = useKeenSlider({
         mode: "free-snap",
+        loop: true,
         slides: {
-          origin: "auto",
+          origin: 0,
           perView: 1,
           spacing: 15,
         },
-      })
+      },[AutoplayPlugin])
     
       
 
@@ -38,13 +64,15 @@ export default function SliderPost() {
        className='object-cover'
         />
          </Link>
-        <div className=' bottom-0 text-black p-4 w-[500px] text-center'>
+        <div className=' bottom-0 roboto text-black p-4 w-[500px] text-center'>
       <TypeWriter className='' text="Collaborated closely with the team to design and enhance the user interface, focusing on both functionality and visual consistency. Integrated dynamic HomePageData from our CMS, allowing the UI to update automatically through effective state management. Improved responsiveness by implementing SASS modules and global styles, avoiding arbitrary percentage values to maintain a consistent layout across devices." duration={5} />
        
         </div>
        
     </div>
-    <div className="keen-slider__slide number-slide2 flex">
+    
+
+    <div ref={sliderRef} className="keen-slider__slide number-slide2 flex">
       <Link href="https://store.jugrnaut.com/">
     <Image 
        src="/jug.jpeg" 
@@ -55,11 +83,15 @@ export default function SliderPost() {
        className='object-cover'
         />
         </Link>
-        <div className='bottom-0 text-black p-4 w-[500px] text-center'>
+        <div className='bottom-0 roboto text-black p-4 w-[500px] text-center'>
         <TypeWriter text="Chicago-based clothing brand — Scaled organic web traffic to over 10K+ monthly visits through SEO-focused content and streamlined performance. Improved site UI/UX by implementing WordPress webhooks, enabling near real-time server-to-client data updates while reducing unnecessary API calls. Minimal use of PHP for maintainability and speed." duration={5} />
         </div>
         </div>
-    <div className="keen-slider__slide number-slide2 flex">
+
+
+
+
+    <div ref={sliderRef} className="keen-slider__slide number-slide2 flex">
       <Link href="https://bucolic-longma-4d65a0.netlify.app/">
     <Image 
        src="/movie.jpeg" 
@@ -70,7 +102,7 @@ export default function SliderPost() {
        className='object-cover'
         />
         </Link>
-        <div className='bottom-0 text-black p-4 w-[500px] text-center'>
+        <div className='bottom-0 roboto text-black p-4 w-[500px] text-center'>
         <TypeWriter text="Developed a responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={5} />
         </div>
         </div>

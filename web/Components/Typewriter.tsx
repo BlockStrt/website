@@ -27,7 +27,7 @@ export default function TypeWriter({ text, duration = 5, className = "" }: TypeW
 
   return (
     <p className={className}>
-      <motion.span className="special-gothic text-[20px]">{displayText}</motion.span>
+      <motion.span className=" text-[20px]">{displayText}</motion.span>
     </p>
   );
 }
