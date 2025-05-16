@@ -49,7 +49,7 @@ export default function Home() {
 
   return (
         <div className={`pt-[15vh] grid bg-amber-100 text-black border-2 overflow-x-hidden grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
-    <header className="w-screen p-2 mx-auto fixed top-0 h-[15%] md:flex justify-between ">
+    <header className="w-full p-2 mx-auto fixed top-0 h-[15%] md:flex justify-between ">
       <div className="p-4 w-full sm:w-full  ">
       <ThemeWrapper >
           <Box type='error' className=' md:w-[50%] text-center  '>{'503:Joshua levy'}</Box>
