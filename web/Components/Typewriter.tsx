@@ -10,6 +10,7 @@ type TypeWriterProps = {
 };
 
 export default function TypeWriter({ text, duration = 5, className = "" }: TypeWriterProps) {
+  // const [isViewed,setViewed] = usestate()
   const count = useMotionValue(0);
   const rounded = useTransform(count, (v) => Math.floor(v));
   const displayText = useTransform(rounded, (v) => text.slice(0, v));

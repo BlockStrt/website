@@ -49,13 +49,13 @@ export default function Home() {
 
   return (
         <div className={`pt-[15vh] grid bg-amber-100 text-black border-2 overflow-x-hidden grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}>
-    <header className="w-screen p-2 mx-auto fixed top-0 h-[15%] flex justify-between ">
-      <div className="p-4 w-full ">
+    <header className="w-screen p-2 mx-auto fixed top-0 h-[15%] md:flex justify-between ">
+      <div className="p-4 w-full sm:w-full  ">
       <ThemeWrapper >
-          <Box type='error' className='w-[15%] text-center '>{'503:Joshua levy'}</Box>
+          <Box type='error' className=' md:w-[50%] text-center  '>{'503:Joshua levy'}</Box>
       </ThemeWrapper>
       </div>
-      <div className="flex space-x-4 ">
+      <div className="flex md:space-x-4 justify-center  space-x-5">
           <a
           href="https://github.com/BlockStrt"
           target="_blank"
@@ -83,10 +83,10 @@ export default function Home() {
 
       {/* Main body */}
 
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start ">
         {/* create a carousel  */}
 
-       <div className="keen-slider__slide min-w-full">
+       <div className="keen-slider__slide min-w-full ">
         <Slider/>
 
        </div>
@@ -95,9 +95,9 @@ export default function Home() {
 
 
          {/* Footer */}
-      <footer className="w-full row-start-3 gap-[24px] flex-wrap items-center justify-between ">
+      <footer className="w-full row-start-3 flex flex-wrap  justify-between gap-6 sm:gap-4">
       
-      <div className="w-[1250px] flex justify-between  ">
+      <div className="flex w-full space-x-50 ">
       <Button 
       onClick={() => setIsOpen(prev => !prev)}
       className='border-none special-gothic'
@@ -124,7 +124,7 @@ export default function Home() {
       className="  text-white special-gothic hover:text-black text-[40px] font-bold"
       aria-label="Close"
     >
-      ×
+      
     </button>
 
         <div className="bg-amber-50 p-8 rounded-lg shadow-lg text-black special-gothic text-[20px] ">
@@ -148,6 +148,9 @@ export default function Home() {
       </Button>
       </Link>
       </div>
+
+
+      
       </footer>
     </div>
   );

@@ -16,7 +16,7 @@ function AutoplayPlugin(slider) {
     timeout = setTimeout(() => {
       if (!slider.track?.details) return; // This makes sure slider.next() is only called when the slider is fully built
       slider.next();
-    }, 3000); // 2 seconds
+    }, 5000); // 2 seconds
   }
 
   slider.on("created", () => {
@@ -52,7 +52,7 @@ export default function SliderPost() {
 
   return (
     <div ref={sliderRef} className="keen-slider w-full flex md:h-[50vh] sm:h-[40vh]  text-center">
-    <div className="keen-slider__slide number-slide1 flex">
+    <div className="keen-slider__slide number-slide1 flex ">
        {/* <Video src={hopeVideo} autoplay/> */}
        <Link href="https://www.hammerandhope.org">
        <Image 
@@ -103,7 +103,7 @@ export default function SliderPost() {
         />
         </Link>
         <div className='bottom-0 roboto text-black p-4 w-[500px] text-center'>
-        <TypeWriter text="Developed a responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={5} />
+        <TypeWriter text="A responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={5} />
         </div>
         </div>
     
