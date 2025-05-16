@@ -5,7 +5,7 @@ import { useEffect, useState, useRef } from "react";
 import { Box, ThemeWrapper } from 'retro-ui'
 import { Button, Modal, Badge } from "arcadeui";
 import Github from "../Components/gitHub";
-import Twitter from "../Components/twitter"
+import Twitter from "../Components/Twitter"
 import {motion} from "motion/react";
 import Linkedin from "../Components/Linked";
 import Slider from "../Components/Slider";

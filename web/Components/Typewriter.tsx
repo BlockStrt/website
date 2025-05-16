@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 type TypeWriterProps = {
-  text?: string;
+  text: string;
   duration?: number;
   className?: string;
 };
