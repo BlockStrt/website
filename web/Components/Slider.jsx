@@ -51,8 +51,8 @@ export default function SliderPost() {
 
 
   return (
-    <div ref={sliderRef} className="keen-slider w-full flex md:h-[50vh] sm:h-[40vh]  text-center">
-    <div className="keen-slider__slide number-slide1 flex ">
+    <div ref={sliderRef} className="keen-slider flex  md:h-[50vh]   text-center">
+    <div className="keen-slider__slide number-slide1 grid md:flex ">
        {/* <Video src={hopeVideo} autoplay/> */}
        <Link href="https://www.hammerandhope.org">
        <Image 
@@ -61,7 +61,8 @@ export default function SliderPost() {
        width={800} 
        height={400} 
        priority
-       className='object-cover'
+       className='object-cover w-full max-w-[90vw] md:max-w-[800px] h-auto rounded-xl shadow'
+       sizes="(max-width: 768px) 90vw, 800px"
         />
          </Link>
         <div className=' bottom-0 roboto text-black p-4 w-[500px] text-center'>
@@ -73,6 +74,7 @@ export default function SliderPost() {
     
 
     <div ref={sliderRef} className="keen-slider__slide number-slide2 flex">
+    <div className="grid md:flex "> 
       <Link href="https://store.jugrnaut.com/">
     <Image 
        src="/jug.jpeg" 
@@ -80,11 +82,13 @@ export default function SliderPost() {
        width={800} 
        height={400} 
        priority
-       className='object-cover'
+       className='object-cover w-full max-w-[90vw] md:max-w-[800px] h-auto rounded-xl shadow'
+       sizes="(max-width: 768px) 90vw, 800px"
         />
         </Link>
         <div className='bottom-0 roboto text-black p-4 w-[500px] text-center'>
         <TypeWriter text="Chicago-based clothing brand — Scaled organic web traffic to over 10K+ monthly visits through SEO-focused content and streamlined performance. Improved site UI/UX by implementing WordPress webhooks, enabling near real-time server-to-client data updates while reducing unnecessary API calls. Minimal use of PHP for maintainability and speed." duration={5} />
+        </div>
         </div>
         </div>
 
@@ -92,6 +96,7 @@ export default function SliderPost() {
 
 
     <div ref={sliderRef} className="keen-slider__slide number-slide2 flex">
+    <div className="grid md:flex ">
       <Link href="https://bucolic-longma-4d65a0.netlify.app/">
     <Image 
        src="/movie.jpeg" 
@@ -99,11 +104,13 @@ export default function SliderPost() {
        width={800} 
        height={400} 
        priority
-       className='object-cover'
+       className='object-cover w-full max-w-[90vw] md:max-w-[800px] h-auto rounded-xl shadow'
+       sizes="(max-width: 768px) 90vw, 800px"
         />
         </Link>
         <div className='bottom-0 roboto text-black p-4 w-[500px] text-center'>
         <TypeWriter text="A responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={5} />
+        </div>
         </div>
         </div>
     
