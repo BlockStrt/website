@@ -108,7 +108,7 @@ export default function SliderPost() {
        sizes="(max-width: 768px) 90vw, 800px"
         />
         </Link>
-        <div className='bottom-0 roboto text-black p-4 w-[500px] text-center'>
+        <div className='bottom-0 roboto text-black p-4 w-full md:w-[500px] text-center'>
         <TypeWriter text="A responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={5} />
         </div>
         </div>
