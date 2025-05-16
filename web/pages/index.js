@@ -55,7 +55,7 @@ export default function Home() {
           <Box type='error' className=' md:w-[50%] text-center  '>{'503:Joshua levy'}</Box>
       </ThemeWrapper>
       </div>
-      <div className="flex  md:space-x-4 justify-end  w-full">
+      <div className="flex  md:space-x-4 justify-end p-4  w-full">
           <a
           href="https://github.com/BlockStrt"
           target="_blank"
