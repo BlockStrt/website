@@ -124,7 +124,7 @@ export default function Home() {
       className="  text-white special-gothic hover:text-black text-[40px] font-bold"
       aria-label="Close"
     >
-      
+      close
     </button>
 
         <div className="bg-amber-50 p-8 rounded-lg shadow-lg text-black special-gothic text-[20px] ">
