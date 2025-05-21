@@ -16,7 +16,7 @@ function AutoplayPlugin(slider) {
     timeout = setTimeout(() => {
       if (!slider.track?.details) return; // This makes sure slider.next() is only called when the slider is fully built
       slider.next();
-    }, 13000); // 2 seconds
+    }, 12000); // 2 seconds
   }
 
   slider.on("created", () => {
@@ -39,7 +39,7 @@ function AutoplayPlugin(slider) {
 
 
 export default function SliderPost() {
-
+    
     const [sliderRef] = useKeenSlider({
         mode: "free-snap",
         loop: true,
@@ -49,7 +49,8 @@ export default function SliderPost() {
           spacing: 15,
         },
       },[AutoplayPlugin])
-    
+
+     
       
 
 
@@ -70,6 +71,7 @@ export default function SliderPost() {
          </Link>
         <div className=' bottom-0 roboto text-black p-4 w-[300px] md:w-[500px] text-center'>
       <TypeWriter className='' text="Collaborated closely with the team to design and enhance the user interface, focusing on both functionality and visual consistency. Integrated dynamic HomePageData from our CMS, allowing the UI to update automatically through effective state management. Improved responsiveness by implementing SASS modules and global styles, avoiding arbitrary percentage values to maintain a consistent layout across devices." duration={10} />
+      
        
         </div>
        
@@ -112,7 +114,7 @@ export default function SliderPost() {
         />
         </Link>
         <div className='bottom-0 roboto text-black p-4 w-[300px] md:w-[500px] text-center'>
-        <TypeWriter text="A responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={10} />
+        <TypeWriter text="A responsive, front-end movie search application using the OMDb API to fetch and display real-time movie data." duration={6} />
         </div>
         </div>
         </div>
