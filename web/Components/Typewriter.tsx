@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 type TypeWriterProps = {
   text: string;
@@ -9,7 +10,7 @@ type TypeWriterProps = {
   className?: string;
 };
 
-export default function TypeWriter({ text, duration = 5, className = "" }: TypeWriterProps) {
+export default function TypeWriter({ text, duration = 10, className = "" }: TypeWriterProps) {
   // const [isViewed,setViewed] = usestate()
   const count = useMotionValue(0);
   const rounded = useTransform(count, (v) => Math.floor(v));
